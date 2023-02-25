@@ -36,6 +36,10 @@ _VALID_URLS = set(uses_relative + uses_netloc + uses_params)
 _VALID_URLS.discard("")
 
 
+class InvalidArguments(Exception):
+    pass
+
+
 # https://github.com/pandas-dev/pandas/blob/master/pandas/io/common.py
 def is_url(url):
     """Check to see if a URL has a valid protocol.
